@@ -56,6 +56,9 @@ header{
  .header-content .logo{
     flex-grow: 1;
  }
+ .header-content .logo img{
+    width: 100%;
+ }
 .header-content nav {
     flex-grow: 3;
     justify-content: stretch;
@@ -693,11 +696,16 @@ footer * {
        display: none;
       }
       
+      
       .login i{
          font-size: 13px;
       }
+      .login ul li:last-child{
+          display: none;
+      }
       body{
         overflow-x: hidden;
+        width: 100vw;
       }
       .logo{
           margin-left: 30px;
@@ -721,12 +729,22 @@ footer * {
       }
       
       .discount .discount-desc{
-          width: 400px;
+          width: 80%;
+          margin-left: 0;
+          margin-right: 0;
           margin-bottom: 30px;
+          font-size: 12px;
+          overflow: hidden;
       }
       .discount-item{
           margin-bottom: 25px;
+          margin-left: 0;
+          margin-right: 0;
           width: 100%;
+      }
+      .discount-item h3, h2{
+         font-size: 13px;
+         font-weight: 100px;  
       }
      
       .sprite-item:not(:last-child){
@@ -737,8 +755,14 @@ footer * {
           margin-bottom: 30px;
       }
       .list-product li{
-          font-size: 14px ;
+          font-size: 12px ;
           margin: 0 5px ;
+      }
+      .product-img img{
+          width: 100%;
+      } 
+      .product-item {
+          font-size: 13px;
       }
       
       .foundation-history{
@@ -750,10 +774,12 @@ footer * {
       .foundation-des{
           width: 100%;
           font-size: 14px;
-          height: 400px;
+          height: 450px;
+          overflow: hidden;
       }
       footer{
         height: 1400px;
+        width : 100%;
 
       }
        .footer{
@@ -774,14 +800,15 @@ footer * {
       
 }
 
-@media  (min-width:768px) and (max-width: 1200px) {
+@media  (min-width:769px) and (max-width: 1200px) {
 
     nav, .footer ul  {
         display: none;
        }
        
+       
        .login i{
-          font-size: 13px;
+          font-size: 13px;   
        }
        body{
          overflow-x: hidden;
@@ -803,21 +830,47 @@ footer * {
        .section-title{
            font-size: 16px;
        }
-       .discount , .product-items{
-           display: block;
+       .discount .discount-desc{
+        grid-area: desc;
+        
+
        }
+       .discount-item.item1{
+            grid-area: item1;
+            
+       }
+       .discount-item.item2{
+        grid-area: item2;
+   }
+       .discount{
+           display: grid;
+           grid-template-areas: 
+           'desc desc desc desc . .'
+           'item1 item1 item1 item2 item2 item2'
+           ;
+       }
+       .product-items{
+           display: grid;
+           grid-template-columns: repeat(2,1fr);
+           grid-template-rows: repeat(3,1fr);
+           column-gap: 9px;
+       }
+       .product-img img{
+        width: 100%;
+    } 
+    .product-item {
+        font-size: 13px;
+    }
        .category-items, .sprites {
            display: grid;
            grid-template-columns: repeat(2,1fr);
        }
        
        .discount .discount-desc{
-           width: 400px;
            margin-bottom: 30px;
        }
        .discount-item{
            margin-bottom: 25px;
-           width: 80%;
        }
       
        .sprite-item:not(:last-child){

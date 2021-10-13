@@ -458,7 +458,8 @@ table:not(.dropdown-menu){
 .product-hover ul{
     position: absolute;
     top:50%;
-    left: 110px;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .product-hover ul li{
     background-color: black;
@@ -799,6 +800,7 @@ footer * {
       }
       
 }
+/* tablet */
 
 @media  (min-width:769px) and (max-width: 1200px) {
 

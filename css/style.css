@@ -53,9 +53,6 @@ header{
     justify-content: space-between;
     align-items: center;
 }
- .header-content .logo{
-    flex-grow: 1;
- }
  .header-content .logo img{
     width: 100%;
  }
@@ -64,9 +61,9 @@ header{
     justify-content: stretch;
 }
 .header-content .login{
-    flex-grow: 1;
     display: flex;
     justify-content: flex-end;
+    
  
 }
 .header-content li,
@@ -696,31 +693,16 @@ footer * {
     nav, .footer ul  {
        display: none;
       }
+     
       
-      
+     
       .login i{
-         font-size: 13px;
+         font-size: 16px;
       }
-      .login ul li:last-child{
-          display: none;
-      }
+     
       body{
         overflow-x: hidden;
         width: 100vw;
-      }
-      .logo{
-          margin-left: 30px;
-          position: relative;
-      }
-      .logo::before{
-          content: "";
-          position: absolute;
-          top: 10px;
-          left: -37px ;
-          background-image: url(../images/menu-icon.png);
-          background-size: cover;
-          height: 30px;
-          width: 30px;
       }
       .section-title{
           font-size: 16px;
@@ -808,27 +790,11 @@ footer * {
         display: none;
        }
        
-       
-       .login i{
-          font-size: 13px;   
-       }
+      
        body{
          overflow-x: hidden;
        }
-       .logo{
-           margin-left: 30px;
-           position: relative;
-       }
-       .logo::before{
-           content: "";
-           position: absolute;
-           top: 10px;
-           left: -37px ;
-           background-image: url(../images/menu-icon.png);
-           background-size: cover;
-           height: 30px;
-           width: 30px;
-       }
+       
        .section-title{
            font-size: 16px;
        }
